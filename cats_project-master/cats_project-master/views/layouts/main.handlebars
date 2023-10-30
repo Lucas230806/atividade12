@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav id="navbar">
+<img src="../../public/assets/img/cat.png" alt="logo cats">
+</a>
+<ul>
+  {{#if session.userId}}
+  <li> <a href="/cats/logout">Logout</a></li>
+  <li> <a href="/login">Login</a></li>
+  {{else}}
+  <li> <a href="/register">Registro</a></li>
+  {{/if}}
+</ul>
+  </nav>
+  {{#if messages.message}}
+  <div class="message">
+    {{message.message}}
+  </div>
+  {{/if}}
+  <div class="container">
+    {{{body}}}
+  </div>
+
+  <footer>
+    <p><span>todos os direitos reservados</span></p>
+  </footer>
+</body>
+</html>
+
